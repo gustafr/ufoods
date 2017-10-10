@@ -10,6 +10,9 @@ Feature: View a restaurant page
     Given the following restaurants exist
       | name    | address   | restaurant_category |  description          |
       | My Thai | Stockholm | Thai                |  Some hip thai place  |
+    Given the following menu exist
+      | name      |
+      | Everyday  |
     And I navigate to the index page
 
   Scenario: User can view a restaurant page

@@ -7,3 +7,10 @@ Given("the following restaurants exist") do |table|
   end
 end
 
+Given("the following menu exist") do |table|
+  table.hashes.each do |hash|
+    FactoryGirl.create(:menu, hash)
+  end
+end
+
+

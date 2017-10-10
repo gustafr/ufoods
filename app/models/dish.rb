@@ -1,5 +1,5 @@
 class Dish < ApplicationRecord
-
+  belongs_to :menu
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true

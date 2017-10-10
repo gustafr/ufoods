@@ -8,6 +8,8 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
     @dishes = Dish.all
+    @menu = Menu.all
+    binding.pry
   end
   
   def find_cart

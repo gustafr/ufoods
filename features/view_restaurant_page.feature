@@ -20,3 +20,4 @@ Feature: View a restaurant page
     Then I should see "My Thai"
     And I should see "Stockholm"
     And I should see "Some hip thai place"
+    And I should see "Everyday"

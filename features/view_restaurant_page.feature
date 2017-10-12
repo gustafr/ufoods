@@ -4,15 +4,13 @@ Feature: View a restaurant page
   I should be able to go to the restaurant page
 
   Background:
-    Given the following category exists
-      | name | description |
-      | Thai | Thai food   |
     Given the following restaurants exist
-      | name    | address   | restaurant_category |  description          |
-      | My Thai | Stockholm | Thai                |  Some hip thai place  |
-    Given the following menu exist
-      | name      |
-      | Everyday  |
+      | name    | address    |  description          | res_category_name | menu_name    |
+      | My Thai | Stockholm  |  Some hip thai place  | Brämhult          | Everyday  |
+#    Given the described objcts have the following associations
+#      | association    | category   |  menu                   |
+#      | My Thai            | Thai       |  Everyday, Weekends     |
+
     And I navigate to the index page
 
   Scenario: User can view a restaurant page
@@ -20,4 +18,5 @@ Feature: View a restaurant page
     Then I should see "My Thai"
     And I should see "Stockholm"
     And I should see "Some hip thai place"
+    And show me the page
     And I should see "Everyday"

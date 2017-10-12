@@ -49,20 +49,11 @@ ActiveRecord::Schema.define(version: 20171010162558) do
     t.index ["dish_category_id"], name: "index_dishes_on_dish_category_id"
   end
 
-  create_table "menus", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "restaurant_id"
-  end
-
   create_table "restaurant_categories", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "restaurant_id"
-    t.index ["restaurant_id"], name: "index_restaurant_categories_on_restaurant_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -93,4 +84,5 @@ ActiveRecord::Schema.define(version: 20171010162558) do
   end
 
   add_foreign_key "dishes", "dish_categories"
+  add_foreign_key "restaurants", "restaurant_categories"
 end

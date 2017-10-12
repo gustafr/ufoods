@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.5'
 gem "haml-rails", "~> 1.0"
 gem 'acts_as_shopping_cart'
 gem 'jquery-rails'
+gem 'devise'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 group :development, :test do
   gem 'pry-byebug'
@@ -28,6 +30,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'poltergeist'
+  gem 'faker'
 end
 
 group :development do
